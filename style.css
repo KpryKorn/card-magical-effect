@@ -62,12 +62,16 @@ main {
   aspect-ratio: 1;
   height: 400px;
   width: 400px;
+  background: #1b2734;
   border-radius: 15%;
   overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 10px 20px -13px rgba(222, 222, 222, 0.75) inset;
+  -webkit-box-shadow: 0px 10px 20px -13px rgba(222, 222, 222, 0.75) inset;
+  -moz-box-shadow: 0px 10px 20px -13px rgba(222, 222, 222, 0.75) inset;
 }
 .tile-image {
   position: absolute;
@@ -75,4 +79,9 @@ main {
   aspect-ratio: 1;
   object-fit: cover;
   object-position: center;
+}
+
+.tile > .tile-image {
+  opacity: var(--opacity);
+  filter: blur(calc(var(--blur) * 10px));
 }
