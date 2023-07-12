@@ -1,0 +1,78 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  background: #061727;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+#wand {
+  width: 100px;
+  aspect-ratio: 1 / 10;
+  background: linear-gradient(
+    to right,
+    rgb(26 44 28) 10%,
+    rgb(42 40 44) 45% 55%,
+    rgb(26 24 28) 90%
+  );
+  overflow: hidden;
+  border-radius: 3vmin;
+  box-shadow: 0vmin 1vmin 4vmin rgb(0 0 0 / 80%);
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  translate: -50%;
+  z-index: 100;
+}
+
+.cap {
+  height: 20%;
+  background: linear-gradient(
+    to right,
+    rgb(212 221 236) 10%,
+    rgb(255 255 255) 45% 55%,
+    rgb(212 221 236) 90%
+  );
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tile {
+  aspect-ratio: 1;
+  height: 400px;
+  width: 400px;
+  border-radius: 15%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tile-image {
+  position: absolute;
+  z-index: 2;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+}
